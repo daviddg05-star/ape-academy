@@ -760,7 +760,7 @@ main, .main-content {
         top: 0;
         width: 75px;
         height: 100vh;
-        z-index: 1050;
+        z-index: 50;
         transition: width 0.3s ease;
         overflow: hidden;
         white-space: nowrap;
@@ -787,8 +787,6 @@ main, .main-content {
     main, .main-content {
         width: calc(100% - 75px);
         margin-left: 75px;
-        padding-left: 15px;
-        padding-right: 15px;
         transition: all 0.3s ease;
     }
 
