@@ -3,7 +3,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 /* Importación de fuentes de Google Fonts */
@@ -55,7 +54,6 @@
     color: #0c142a;
     margin: 4px 0 0 0;
     text-align: center;
-    /* Mantiene la frase centrada con respecto al título superior */
     letter-spacing: -0.3px;
 }
 
@@ -74,6 +72,7 @@ body {
     margin: 20px;
     padding: 10px;
 }
+
 /* dashboard */
 .dashboard {
     display: flex;
@@ -85,7 +84,6 @@ body {
     font-family: "Nunito", sans-serif;
     height: 100vh;
     color: #fff;
-    /* Sombra blanca sutil y difuminada que proyecta hacia la derecha */
     -webkit-box-shadow: 4px 0px 15px rgba(255, 255, 255, 0.12);
     box-shadow: 4px 0px 15px rgba(255, 255, 255, 0.12);
 }
@@ -104,7 +102,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-
 }
 
 .dashboard-nav li a {
@@ -138,19 +135,16 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    /* Espacio entre el icono animado y el texto */
     padding: 12px 20px;
     color: #ffffff;
     text-decoration: none;
     transition: background 0.3s ease;
 }
 
-
 .dashboard-menu li a:hover,
 .dashboard-menu li a.activo {
     background-color: rgba(255, 255, 255, 0.08);
     border-left: 4px solid #6fffe8;
-    /* Detalle verde al activarse */
 }
 
 .dashboard-menu li a i {
@@ -161,10 +155,7 @@ body {
 .dashboard-menu li a.activo i,
 .dashboard-menu li a:hover i {
     color: #6fffe8;
-    /* Verde de la marca */
 }
-
-.dashboard-menu {}
 
 .dashboard-footer-sidebar {
     padding: 12px 20px;
@@ -178,19 +169,16 @@ body {
     z-index: 100;
 }
 
-/* Alinea el icono al lado del texto */
 .user-profile {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-/* Ajusta el tamaño e invierte el color del icono para contraste */
 .user-icon {
     width: 32px;
     height: 32px;
     background-color: #0c142a;
-    /* Fondo oscuro para resaltar sobre el fondo #6fffe8 */
     flex-shrink: 0;
 }
 
@@ -202,11 +190,6 @@ body {
 .user-details p {
     margin: 0;
     line-height: 1.2;
-}
-
-.user-details {
-    display: flex;
-    flex-direction: column;
 }
 
 .dashboard-footer-sidebar .user-name {
@@ -245,7 +228,6 @@ body {
     box-shadow: 0 12px 28px rgba(111, 255, 232, 0.1);
 }
 
-/* --- ESTRUCTURA INTERNA DE LA CARD --- */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -259,10 +241,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #a0aec0;
-    /* Gris claro para destacar sobre el fondo oscuro */
 }
 
-/* Caja cuadrada para el icono a la derecha */
 .card-icon-box {
     width: 42px;
     height: 42px;
@@ -274,7 +254,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Ajuste del número */
 .num {
     font-size: 2.2rem;
     font-weight: 800;
@@ -283,7 +262,6 @@ body {
     line-height: 1;
 }
 
-/* --- VARIACIONES DE COLOR PARA LAS CAJAS DE ICONOS --- */
 .azul {
     background: rgba(124, 134, 231, 0.2);
     color: #7C86E7;
@@ -314,9 +292,7 @@ body {
     justify-content: space-between;
     margin-top: 24px;
     padding: 24px 32px;
-    background: linear-gradient(135deg,
-            rgba(22, 36, 71, 0.7) 0%,
-            rgba(15, 25, 52, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(22, 36, 71, 0.7) 0%, rgba(15, 25, 52, 0.85) 100%);
     border: 1px solid rgba(111, 255, 232, 0.15);
     border-radius: 12px;
     backdrop-filter: blur(8px);
@@ -344,35 +320,18 @@ body {
     animation: float 4s ease-in-out infinite;
 }
 
-/* Efecto de flotación para la mascota */
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-8px);
-    }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
 }
 
-/* Cierra dashboard */
-
-/* Inicia Main */
-main {
-    /* El degradado radial nace cerca de la esquina superior izquierda */
-    background: radial-gradient(circle at 10% 10%,
-            rgba(15, 45, 60, 0.8) 0%,
-            /* Tono azul/verde verdoso difuminado */
-            rgba(12, 20, 42, 0.95) 45%,
-            /* Transición hacia tu azul oscuro */
-            #0c142a 80%
-            /* Color base de tu sitio */
-        );
+/* --- MAIN Y COMPATIBILIDAD GENERAL PARA PÁGINAS INTERNAS --- */
+main, .main-content {
+    background: radial-gradient(circle at 10% 10%, rgba(15, 45, 60, 0.8) 0%, rgba(12, 20, 42, 0.95) 45%, #0c142a 80%);
     box-sizing: border-box;
     width: 80%;
-    height: 100vh;
+    min-height: 100vh;
+    margin-left: 20%;
 }
 
 .header-main {
@@ -384,7 +343,6 @@ main {
     backdrop-filter: blur(8px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-
 }
 
 .header-main h1 {
@@ -393,12 +351,11 @@ main {
 
 .page-cont {
     padding: 20px 25px 0 25px;
-    min-height: 100vh;
+    min-height: calc(100vh - 150px);
     margin-bottom: 90px;
 }
 
 .footer-main {
-
     color: #fff;
     padding: 10px;
     font-family: 'Fredoka', sans-serif;
@@ -407,18 +364,11 @@ main {
     backdrop-filter: blur(8px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    padding: 5px 25px;
+    padding: 15px 25px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    bottom: 0;
-    width: 80%;
 }
 
-
-
-/* --- BARRA DE ACCIONES Y FILTROS --- */
+/* --- ESTILOS DE TABLAS Y ACCIONES (Para páginas como Estudiantes, Cursos, Matrículas) --- */
 .table-actions {
     display: flex;
     justify-content: space-between;
@@ -458,18 +408,6 @@ main {
     color: #ffffff;
     font-size: 0.9rem;
     outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.select-box select {
-    padding-left: 14px;
-    cursor: pointer;
-    background-color: #0f1934;
-}
-
-.search-box input:focus,
-.select-box select:focus {
-    border-color: #6fffe8;
 }
 
 .btn-primary {
@@ -483,17 +421,15 @@ main {
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.3s ease;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
     background-color: #57ebd3;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(111, 255, 232, 0.3);
 }
 
-/* --- TABLA --- */
 .table-container {
     background: linear-gradient(135deg, rgba(22, 36, 71, 0.7) 0%, rgba(15, 25, 52, 0.85) 100%);
     border: 1px solid rgba(111, 255, 232, 0.15);
@@ -519,7 +455,6 @@ main {
     padding: 16px 20px;
     font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
     color: #6fffe8;
 }
 
@@ -533,65 +468,24 @@ main {
     background: rgba(111, 255, 232, 0.03);
 }
 
-/* --- BADGES DE ESTADO --- */
+/* Badges y Acciones */
 .badge {
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.05em;
     display: inline-block;
 }
 
-.badge-activa {
-    background: rgba(111, 255, 232, 0.15);
-    color: #6fffe8;
-    border: 1px solid rgba(111, 255, 232, 0.3);
-}
+.badge-activa { background: rgba(111, 255, 232, 0.15); color: #6fffe8; border: 1px solid rgba(111, 255, 232, 0.3); }
+.badge-completada { background: rgba(72, 187, 120, 0.15); color: #68d391; border: 1px solid rgba(72, 187, 120, 0.3); }
+.badge-cancelada { background: rgba(245, 101, 101, 0.15); color: #fc8181; border: 1px solid rgba(245, 101, 101, 0.3); }
 
-.badge-completada {
-    background: rgba(72, 187, 120, 0.15);
-    color: #68d391;
-    border: 1px solid rgba(72, 187, 120, 0.3);
-}
+.actions-cell { display: flex; gap: 8px; }
+.btn-action { background: transparent; border: none; font-size: 1.1rem; cursor: pointer; padding: 6px; border-radius: 6px; }
+.btn-action.edit { color: #6fffe8; }
+.btn-action.delete { color: #fc8181; }
 
-.badge-cancelada {
-    background: rgba(245, 101, 101, 0.15);
-    color: #fc8181;
-    border: 1px solid rgba(245, 101, 101, 0.3);
-}
-
-/* --- ACCIONES --- */
-.actions-cell {
-    display: flex;
-    gap: 8px;
-}
-
-.btn-action {
-    background: transparent;
-    border: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-    padding: 6px;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-}
-
-.btn-action.edit {
-    color: #6fffe8;
-}
-
-.btn-action.edit:hover {
-    background: rgba(111, 255, 232, 0.15);
-}
-
-.btn-action.delete {
-    color: #fc8181;
-}
-
-.btn-action.delete:hover {
-    background: rgba(245, 101, 101, 0.15);
-}
 
 /* --- ESTRUCTURA DEL MODAL POPUP --- */
 .modal-overlay {
@@ -787,4 +681,162 @@ main {
     cursor: pointer;
     filter: invert(88%) sepia(21%) saturate(992%) hue-rotate(116deg) brightness(105%) contrast(102%);
     /* Color turquesa #6fffe8 */
+}
+
+
+
+/* --- CONFIGURACIÓN RESPONSIVE --- */
+
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle-btn {
+    display: none;
+}
+
+/* ESCRITORIO */
+@media (min-width: 769px) {
+    .dashboard {
+        display: flex;
+    }
+
+    .dashboard-header {
+        width: 20%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 100;
+    }
+
+    .dashboard-footer-sidebar {
+        width: 20%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 101;
+    }
+
+    main, .main-content {
+        margin-left: 20%;
+        width: 80%;
+    }
+
+}
+
+/* MÓVILES Y TABLETS */
+@media (max-width: 768px) {
+    .menu-toggle-btn {
+        display: block;
+        position: fixed;
+        top: 2px;
+        left: 15px;
+        z-index: 1300;
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: rgba(10, 15, 30, 0.6)
+    }
+
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 15, 30, 0.6);
+        backdrop-filter: blur(4px);
+        z-index: 1150;
+    }
+
+    .menu-toggle-checkbox:checked ~ .menu-overlay {
+        display: block;
+    }
+
+    .dashboard-header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 75px;
+        height: 100vh;
+        z-index: 1050;
+        transition: width 0.3s ease;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .dashboard-header .brand-text,
+    .dashboard-header .tagline,
+    .dashboard-header .dashboard-menu span,
+    .dashboard-header .user-details {
+        display: none;
+    }
+
+    .dashboard-footer-sidebar {
+        width: 75px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1051;
+        padding: 12px 12px;
+        transition: width 0.3s ease;
+        overflow: hidden;
+    }
+
+    main, .main-content {
+        width: calc(100% - 75px);
+        margin-left: 75px;
+        padding-left: 15px;
+        padding-right: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .footer-main {
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+    /* Al abrirse el menú */
+    .menu-toggle-checkbox:checked ~ .dashboard-header {
+        width: 280px;
+        box-shadow: 20px 0 50px rgba(0,0,0,0.8);
+        z-index: 1200;
+    }
+
+    .menu-toggle-checkbox:checked ~ .dashboard-header .brand-text,
+    .menu-toggle-checkbox:checked ~ .dashboard-header .tagline,
+    .menu-toggle-checkbox:checked ~ .dashboard-header .dashboard-menu span,
+    .menu-toggle-checkbox:checked ~ .dashboard-header .user-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-toggle-checkbox:checked ~ .dashboard-header .dashboard-footer-sidebar,
+    .menu-toggle-checkbox:checked ~ .dashboard-footer-sidebar {
+        width: 280px;
+        z-index: 1201;
+    }
+
+    .menu-toggle-checkbox:checked ~ main,
+    .menu-toggle-checkbox:checked ~ .main-content {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 85px;
+    }
+
+    .menu-toggle-checkbox:checked ~ .footer-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .dashboard-cars {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
 }

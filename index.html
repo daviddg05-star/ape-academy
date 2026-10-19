@@ -11,7 +11,18 @@
 </head>
 
 <body class="dashboard">
-    <header class="dashboard-header">
+    <!-- Checkbox oculto para controlar la apertura del menú en móvil sin JS -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+
+    <!-- Botón hamburguesa fijo para abrir el menú en móviles -->
+    <label for="menu-toggle" class="menu-toggle-btn">
+        <i class="bi bi-list"></i>
+    </label>
+
+    <!-- Capa oscura de fondo (overlay) para cerrar el menú al hacer clic fuera -->
+    <label for="menu-toggle" class="menu-overlay"></label>
+
+    <header class="dashboard-header" id="dashboardHeader">
         <div class="brand-logo">
             <!-- Icono cargado como máscara CSS -->
             <span class="brand-icon"></span>
@@ -24,11 +35,10 @@
 
         <nav class="dashboard-nav">
             <ul class="dashboard-menu">
-                <li><a href="#" class="activo"><i class="bi bi-grid-1x2-fill icon-animated"></i>Dashboard</a></li>
-                <li><a href="estudiantes.html"><i class="bi bi-people-fill icon-animated"></i>Estudiantes</a></li>
-                <li><a href="cursos.html"><i class="bi bi-journal-bookmark-fill icon-animated"></i>Cursos</a></li>
-                <li><a href="Matriculas.html"><i class="bi bi-card-checklist icon-animated"></i>Matrículas</a>
-                </li>
+                <li><a href="#" class="activo"><i class="bi bi-grid-1x2-fill icon-animated"></i><span>Dashboard</span></a></li>
+                <li><a href="estudiantes.html"><i class="bi bi-people-fill icon-animated"></i><span>Estudiantes</span></a></li>
+                <li><a href="cursos.html"><i class="bi bi-journal-bookmark-fill icon-animated"></i><span>Cursos</span></a></li>
+                <li><a href="Matriculas.html"><i class="bi bi-card-checklist icon-animated"></i><span>Matrículas</span></a></li>
             </ul>
         </nav>
         <footer class="dashboard-footer-sidebar">
@@ -41,7 +51,8 @@
             </div>
         </footer>
     </header>
-    <main>
+
+    <main class="main-content">
         <header class="header-main">
             <h1>Dashboard</h1>
         </header>
@@ -55,7 +66,7 @@
                     <img src="img/ape-academy-mascot.png" alt="Mascota Ape Academy" />
                 </div>
             </div>
-            <cards class="dashboard-cars">
+            <div class="dashboard-cars">
                 <div class="card">
                     <div class="card-header">
                         <span class="card-title">ESTUDIANTES</span>
@@ -110,8 +121,7 @@
                     </div>
                     <p class="num">5</p>
                 </div>
-            </cards>
-
+            </div>
         </div>
         <footer class="footer-main">
             Todos los derechos reservados 2026 | Juan Murillo
