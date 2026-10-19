@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ape Academy | Cursos</title>
+</head>
+
+<body class="dashboard">
+    <header class="dashboard-header">
+        <div class="brand-logo">
+            <!-- Icono cargado como máscara CSS -->
+            <span class="brand-icon"></span>
+            <!-- Bloque de texto -->
+            <div class="brand-text">
+                <h1 class="brand-title">Ape Academy</h1>
+                <p class="tagline">¡Aprende sin límites!</p>
+            </div>
+        </div>
+
+        <nav class="dashboard-nav">
+            <ul class="dashboard-menu">
+                <li><a href="Dashboard.html"><i class="bi bi-grid-1x2-fill icon-animated"></i>Dashboard</a></li>
+                <li><a href="estudiantes.html"><i class="bi bi-people-fill icon-animated"></i>Estudiantes</a></li>
+                <li><a href="cursos.html" class="activo"><i
+                            class="bi bi-journal-bookmark-fill icon-animated"></i>Cursos</a></li>
+                <li><a href="Matriculas.html"><i class="bi bi-card-checklist icon-animated"></i>Matrículas</a>
+                </li>
+            </ul>
+        </nav>
+        <footer class="dashboard-footer-sidebar">
+            <div class="user-profile">
+                <span class="brand-icon user-icon"></span>
+                <div class="user-details">
+                    <p class="user-name">Juan Murillo</p>
+                    <p class="user-email">jdmurillove@cesde.net</p>
+                </div>
+            </div>
+        </footer>
+    </header>
+    <main>
+        <header class="header-main">
+            <h1>Cursos</h1>
+        </header>
+        <div class="page-cont">
+            <!-- Banner Superior con Mascota -->
+            <div class="welcome-banner page-banner">
+                <div class="welcome-text">
+                    <h2>Cursos</h2>
+                    <p>Gestión de cursos registrados y oferta académica.</p>
+                </div>
+                <div class="welcome-mascot">
+                    <img src="img/ape-academy-mascot.png" alt="Mascota Ape Academy" />
+                </div>
+            </div>
+
+            <!-- Barra de Controles: Búsqueda y Botón -->
+            <div class="table-actions">
+                <div class="search-filter-group">
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Buscar curso..." />
+                    </div>
+                </div>
+                <a href="#modal-estudiante" class="btn-primary">
+                    <i class="bi bi-plus-lg"></i> Nuevo Curso
+                </a>
+            </div>
+
+            <!-- Tabla de Cursos -->
+            <div class="table-container">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Curso</th>
+                            <th>Capacidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>REACT01</strong></td>
+                            <td>React Desde Cero</td>
+                            <td>30</td>
+                            <td class="actions-cell">
+                                <button class="btn-action edit" title="Editar"><i
+                                        class="bi bi-pencil-square"></i></button>
+                                <button class="btn-action delete" title="Eliminar"><i
+                                        class="bi bi-trash-fill"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>SPRING01</strong></td>
+                            <td>Spring Boot</td>
+                            <td>26</td>
+                            <td class="actions-cell">
+                                <button class="btn-action edit" title="Editar"><i
+                                        class="bi bi-pencil-square"></i></button>
+                                <button class="btn-action delete" title="Eliminar"><i
+                                        class="bi bi-trash-fill"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <footer class="footer-main">
+            Todos los derechos reservados 2026 | Juan Murillo
+        </footer>
+    </main>
+
+    <!-- VENTANA MODAL (POPUP) -->
+    <div id="modal-estudiante" class="modal-overlay">
+        <div class="modal-content">
+
+            <!-- Cabecera del Modal -->
+            <div class="modal-header">
+                <h3><i class="bi bi-person-plus-fill"></i> Registrar Nuevo Curso</h3>
+                <a href="#" class="close-btn" title="Cerrar">&times;</a>
+            </div>
+
+            <!-- Formulario -->
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="nombre">Código</label>
+                    <input type="text" id="nombre" placeholder="Ej. Código" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="apellido">Curso</label>
+                    <input type="text" id="apellido" placeholder="Ej. React Desde Cero" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="celular">Capacidad</label>
+                    <input type="tel" id="celular" placeholder="30" required />
+                </div>
+
+                <!-- Acciones del Formulario -->
+                <div class="modal-actions">
+                    <a href="#" class="btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn-primary">Guardar Estudiante</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

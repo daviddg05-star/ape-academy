@@ -1,0 +1,790 @@
+/* Reset Estilo */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Importación de fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Montserrat:wght@500;600&display=swap');
+
+/* Estructura del contenedor principal del logo */
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    background: #6fffe8;
+    padding: 50px 10px 50px 10px;
+}
+
+/* Icono SVG */
+.brand-icon {
+    display: inline-block;
+    width: 63px;
+    height: 58px;
+    background-color: #0c142a;
+    -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.35 484.05'%3E%3Cg id='aaS8qX.tif'%3E%3Cg%3E%3Cpath d='M514.84,196.92c-14.2-18.78-37.6-29.97-62.5-30.89l-9.85-.36c-11.8-36.83-34.41-63.62-68.18-82.13-1.33-.73-2.35-1.7-2.75-2.52-.7-1.42-.09-2.61.5-3.99l13.43-31.54c.44-1.04.02-2.53-.42-3.09-.42-.54-1.59-1.29-2.86-1.12l-60.54,8.2c4.14-12.19,11.79-46.49,6.17-49.19-.81-.39-2.16-.42-3.29.12l-48.06,22.95-79.49,38.52c-15.22,7.37-29.64,14.32-44.11,22.95-30.79,18.35-53.7,46.49-63.85,80.92l-10.17.23c-35.24.81-66.19,23.53-75.77,57.51-7.43,26.37-1.33,54.55,16.75,74.88,15.79,17.75,37.36,27.74,61.54,27.94l.84,39.16.38,11.9c.1,3.2,1.36,6.23,3.91,8.11l12.71,9.37,45.71,31.48,51.43,35.19c9.15,6.26,17.45,12.56,28.12,16.1,21.13,7.01,43.4,7.91,65.29,4.46,16.73-2.64,29.97-10.04,44.02-19.68l69.8-47.9,40.36-28.11c3.92-2.73,4.77-6.18,4.87-10.7l1.11-49.44c35.54-.22,67.12-22.92,77.64-56.57,7.86-25.14,3.31-51.54-12.75-72.79ZM81.96,209.56l-.28,93.42c0,2.3-.87,3.54-2.83,3.38-9.21-.74-17.99-2.71-26.1-6.86-17.34-8.86-28.71-25.75-31.66-43.37-3.52-21.06,3.43-41.13,18.62-54.98,11.98-10.92,27.73-15.94,43.97-15.36l-1.73,23.76ZM297.31,459.79c-20.33,6.03-41.06,6.03-61.08.62-27.06-8.68-48.06-29.13-56.98-56.24h172.81c-8.7,26.2-28.54,46.17-54.75,55.62ZM358.49,299.21l-21.52,12.29c-3.37,1.93-3.68,5.87-1.66,9.09l8.11,12.93c9.65,15.37,14.33,33.58,12.39,52.02h-180.38c-1.96-18.41,2.95-36.53,12.44-52.02l8.72-14.24c2.12-3.46-.24-7.03-3.72-8.66-12.96-6.09-24.61-13.46-34.37-23.78-23.95-25.32-27.96-62.74-9.34-92.38,12.98-20.66,35.71-33.67,60.52-33.43,17.75.17,33.85,7.42,47.16,18.54,5.5,4.59,11.59,5.11,17.19.35,13.11-11.13,29.29-18.48,46.77-18.87,32.56-.72,60.3,20.68,69.57,51.45,10.27,34.07-3.08,66.8-31.88,86.72ZM502.63,276.66c-11.11,18.98-31.44,29.79-52.8,29.48l-.23-78.48c-.04-14.3-.54-27.5-2.2-41.83,15.94-.66,31.08,4.06,42.84,14.14,22.21,19.04,27.28,51.26,12.39,76.7Z'/%3E%3Cpath d='M354.64,229.15l-43.33-25.18c-1.16-.67-2.31-.58-2.89-.15-.65.48-1.19,1.47-1.21,2.47l.39,15.41,30.21,17.62-30.23,17.8-.14,16.58c-.01,1.53,2.75,2.04,3.97,1.32l45.08-26.63c3.6-2.13,4.27-6.99,3.87-10.79-.32-3.01-2.35-6.51-5.7-8.46Z'/%3E%3Cpath d='M193.38,239.23l19.76-11.25,10.8-6.68.09-15.8c0-1.34-1.79-2.69-3.12-1.92l-42.83,24.64c-4.66,2.68-7.35,6.54-7.27,11.57.08,5.2,3.14,8.44,7.8,11.14l41.35,23.95c1.07.62,2.64.41,3.31-.05.45-.31.87-1.26.84-2.26l-.57-15.63-30.16-17.71Z'/%3E%3Cpath d='M290.56,198.38c-.23-.4-.96-1-1.77-1.01l-11.17-.16c-2.34-.03-3.73,1.06-4.59,3.34l-30.3,79.87c-.39,1.02-.08,2.01.26,2.44.21.27.73.67,1.46.67l11.66.04c2.84,0,3.89-1.68,4.79-4.1l29.59-78.92c.36-.96.39-1.61.07-2.17Z'/%3E%3Cpath d='M237.45,308.55c-4.97-.84-8.72,1.24-10.09,5.69-1.09,3.55.8,8.2,5.07,9.68,4.89,1.7,8.77,4.57,10.99,9.41,1.53,3.34,4.73,5.32,8.26,4.57,2.7-.57,5.88-2.89,5.8-7.01-.22-11.24-9.34-20.53-20.04-22.34Z'/%3E%3Cpath d='M293.91,308.57c-10.51,1.76-18.79,10.23-20.22,20.81-.56,4.17,1.77,7.33,5.3,8.37,9.16,2.7,7.39-9.65,19.32-13.58,4.51-1.48,6.6-6.1,5.52-9.83-1.33-4.58-5.07-6.58-9.92-5.77Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml;charset=utf-8,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.35 484.05'%3E%3Cg id='aaS8qX.tif'%3E%3Cg%3E%3Cpath d='M514.84,196.92c-14.2-18.78-37.6-29.97-62.5-30.89l-9.85-.36c-11.8-36.83-34.41-63.62-68.18-82.13-1.33-.73-2.35-1.7-2.75-2.52-.7-1.42-.09-2.61.5-3.99l13.43-31.54c.44-1.04.02-2.53-.42-3.09-.42-.54-1.59-1.29-2.86-1.12l-60.54,8.2c4.14-12.19,11.79-46.49,6.17-49.19-.81-.39-2.16-.42-3.29.12l-48.06,22.95-79.49,38.52c-15.22,7.37-29.64,14.32-44.11,22.95-30.79,18.35-53.7,46.49-63.85,80.92l-10.17.23c-35.24.81-66.19,23.53-75.77,57.51-7.43,26.37-1.33,54.55,16.75,74.88,15.79,17.75,37.36,27.74,61.54,27.94l.84,39.16.38,11.9c.1,3.2,1.36,6.23,3.91,8.11l12.71,9.37,45.71,31.48,51.43,35.19c9.15,6.26,17.45,12.56,28.12,16.1,21.13,7.01,43.4,7.91,65.29,4.46,16.73-2.64,29.97-10.04,44.02-19.68l69.8-47.9,40.36-28.11c3.92-2.73,4.77-6.18,4.87-10.7l1.11-49.44c35.54-.22,67.12-22.92,77.64-56.57,7.86-25.14,3.31-51.54-12.75-72.79ZM81.96,209.56l-.28,93.42c0,2.3-.87,3.54-2.83,3.38-9.21-.74-17.99-2.71-26.1-6.86-17.34-8.86-28.71-25.75-31.66-43.37-3.52-21.06,3.43-41.13,18.62-54.98,11.98-10.92,27.73-15.94,43.97-15.36l-1.73,23.76ZM297.31,459.79c-20.33,6.03-41.06,6.03-61.08.62-27.06-8.68-48.06-29.13-56.98-56.24h172.81c-8.7,26.2-28.54,46.17-54.75,55.62ZM358.49,299.21l-21.52,12.29c-3.37,1.93-3.68,5.87-1.66,9.09l8.11,12.93c9.65,15.37,14.33,33.58,12.39,52.02h-180.38c-1.96-18.41,2.95-36.53,12.44-52.02l8.72-14.24c2.12-3.46-.24-7.03-3.72-8.66-12.96-6.09-24.61-13.46-34.37-23.78-23.95-25.32-27.96-62.74-9.34-92.38,12.98-20.66,35.71-33.67,60.52-33.43,17.75.17,33.85,7.42,47.16,18.54,5.5,4.59,11.59,5.11,17.19.35,13.11-11.13,29.29-18.48,46.77-18.87,32.56-.72,60.3,20.68,69.57,51.45,10.27,34.07-3.08,66.8-31.88,86.72ZM502.63,276.66c-11.11,18.98-31.44,29.79-52.8,29.48l-.23-78.48c-.04-14.3-.54-27.5-2.2-41.83,15.94-.66,31.08,4.06,42.84,14.14,22.21,19.04,27.28,51.26,12.39,76.7Z'/%3E%3Cpath d='M354.64,229.15l-43.33-25.18c-1.16-.67-2.31-.58-2.89-.15-.65.48-1.19,1.47-1.21,2.47l.39,15.41,30.21,17.62-30.23,17.8-.14,16.58c-.01,1.53,2.75,2.04,3.97,1.32l45.08-26.63c3.6-2.13,4.27-6.99,3.87-10.79-.32-3.01-2.35-6.51-5.7-8.46Z'/%3E%3Cpath d='M193.38,239.23l19.76-11.25,10.8-6.68.09-15.8c0-1.34-1.79-2.69-3.12-1.92l-42.83,24.64c-4.66,2.68-7.35,6.54-7.27,11.57.08,5.2,3.14,8.44,7.8,11.14l41.35,23.95c1.07.62,2.64.41,3.31-.05.45-.31.87-1.26.84-2.26l-.57-15.63-30.16-17.71Z'/%3E%3Cpath d='M290.56,198.38c-.23-.4-.96-1-1.77-1.01l-11.17-.16c-2.34-.03-3.73,1.06-4.59,3.34l-30.3,79.87c-.39,1.02-.08,2.01.26,2.44.21.27.73.67,1.46.67l11.66.04c2.84,0,3.89-1.68,4.79-4.1l29.59-78.92c.36-.96.39-1.61.07-2.17Z'/%3E%3Cpath d='M237.45,308.55c-4.97-.84-8.72,1.24-10.09,5.69-1.09,3.55.8,8.2,5.07,9.68,4.89,1.7,8.77,4.57,10.99,9.41,1.53,3.34,4.73,5.32,8.26,4.57,2.7-.57,5.88-2.89,5.8-7.01-.22-11.24-9.34-20.53-20.04-22.34Z'/%3E%3Cpath d='M293.91,308.57c-10.51,1.76-18.79,10.23-20.22,20.81-.56,4.17,1.77,7.33,5.3,8.37,9.16,2.7,7.39-9.65,19.32-13.58,4.51-1.48,6.6-6.1,5.52-9.83-1.33-4.58-5.07-6.58-9.92-5.77Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* Contenedor de los textos verticalmente alineados */
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Título principal con Fredoka */
+.brand-title {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #0c142a;
+    margin: 0;
+    line-height: 1;
+    padding: 0px !important;
+}
+
+/* Tagline con Montserrat alineado debajo de Ape Academy */
+.tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #0c142a;
+    margin: 4px 0 0 0;
+    text-align: center;
+    /* Mantiene la frase centrada con respecto al título superior */
+    letter-spacing: -0.3px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 15px;
+    background: #0c142a;
+}
+
+.header-logo img {
+    width: 80%;
+    margin: 20px;
+    padding: 10px;
+}
+/* dashboard */
+.dashboard {
+    display: flex;
+}
+
+.dashboard-header {
+    width: 20%;
+    background: #0c142a;
+    font-family: "Nunito", sans-serif;
+    height: 100vh;
+    color: #fff;
+    /* Sombra blanca sutil y difuminada que proyecta hacia la derecha */
+    -webkit-box-shadow: 4px 0px 15px rgba(255, 255, 255, 0.12);
+    box-shadow: 4px 0px 15px rgba(255, 255, 255, 0.12);
+}
+
+.dashboard-header h1 {
+    padding: 16px 25px;
+}
+
+.dashboard-nav {
+    color: #2d3b48;
+    margin: 20px 0px;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.dashboard-nav li a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 16px 25px;
+    margin: 3px 0;
+    font-weight: 600;
+}
+
+.dashboard-nav li a:hover {
+    color: #6fffe8;
+    background-color: rgba(91, 107, 232, 0.15);
+}
+
+.dashboard-nav li a.activo {
+    color: #6fffe8;
+    background-color: rgba(91, 107, 232, 0.15);
+    font-weight: 900;
+}
+
+.dashboard-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Espacio entre el icono animado y el texto */
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+
+.dashboard-menu li a:hover,
+.dashboard-menu li a.activo {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #6fffe8;
+    /* Detalle verde al activarse */
+}
+
+.dashboard-menu li a i {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.dashboard-menu li a.activo i,
+.dashboard-menu li a:hover i {
+    color: #6fffe8;
+    /* Verde de la marca */
+}
+
+.dashboard-menu {}
+
+.dashboard-footer-sidebar {
+    padding: 12px 20px;
+    background: #6fffe8;
+    color: #0c142a;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+/* Alinea el icono al lado del texto */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Ajusta el tamaño e invierte el color del icono para contraste */
+.user-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #0c142a;
+    /* Fondo oscuro para resaltar sobre el fondo #6fffe8 */
+    flex-shrink: 0;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-footer-sidebar .user-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #0c142a;
+}
+
+.user-email {
+    font-size: 0.75rem;
+    color: #1a2646;
+    margin-top: 2px;
+}
+
+.dashboard-cars {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: linear-gradient(135deg, rgba(22, 36, 71, 0.7) 0%, rgba(15, 25, 52, 0.85) 100%);
+    border: 1px solid rgba(111, 255, 232, 0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(111, 255, 232, 0.4);
+    box-shadow: 0 12px 28px rgba(111, 255, 232, 0.1);
+}
+
+/* --- ESTRUCTURA INTERNA DE LA CARD --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #a0aec0;
+    /* Gris claro para destacar sobre el fondo oscuro */
+}
+
+/* Caja cuadrada para el icono a la derecha */
+.card-icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* Ajuste del número */
+.num {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+}
+
+/* --- VARIACIONES DE COLOR PARA LAS CAJAS DE ICONOS --- */
+.azul {
+    background: rgba(124, 134, 231, 0.2);
+    color: #7C86E7;
+    border: 1px solid rgba(124, 134, 231, 0.4);
+}
+
+.verde {
+    background: rgba(111, 255, 232, 0.15);
+    color: #6fffe8;
+    border: 1px solid rgba(111, 255, 232, 0.3);
+}
+
+.rojo {
+    background: rgba(254, 226, 226, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+.morado {
+    background: rgba(243, 232, 255, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+.welcome-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding: 24px 32px;
+    background: linear-gradient(135deg,
+            rgba(22, 36, 71, 0.7) 0%,
+            rgba(15, 25, 52, 0.85) 100%);
+    border: 1px solid rgba(111, 255, 232, 0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.welcome-text h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.welcome-text p {
+    color: #a0aec0;
+    font-size: 0.95rem;
+    max-width: 480px;
+}
+
+.welcome-mascot img {
+    height: 160px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Efecto de flotación para la mascota */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Cierra dashboard */
+
+/* Inicia Main */
+main {
+    /* El degradado radial nace cerca de la esquina superior izquierda */
+    background: radial-gradient(circle at 10% 10%,
+            rgba(15, 45, 60, 0.8) 0%,
+            /* Tono azul/verde verdoso difuminado */
+            rgba(12, 20, 42, 0.95) 45%,
+            /* Transición hacia tu azul oscuro */
+            #0c142a 80%
+            /* Color base de tu sitio */
+        );
+    box-sizing: border-box;
+    width: 80%;
+    height: 100vh;
+}
+
+.header-main {
+    color: #fff;
+    padding: 10px;
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(135deg, rgba(22, 36, 71, 0.7) 0%, rgba(15, 25, 52, 0.85) 100%);
+    border: 1px solid rgba(111, 255, 232, 0.15);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+
+}
+
+.header-main h1 {
+    font-weight: 500;
+}
+
+.page-cont {
+    padding: 20px 25px 0 25px;
+    min-height: 100vh;
+    margin-bottom: 90px;
+}
+
+.footer-main {
+
+    color: #fff;
+    padding: 10px;
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(135deg, rgba(22, 36, 71, 0.7) 0%, rgba(15, 25, 52, 0.85) 100%);
+    border: 1px solid rgba(111, 255, 232, 0.15);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 5px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+}
+
+
+
+/* --- BARRA DE ACCIONES Y FILTROS --- */
+.table-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 24px 0 16px 0;
+    flex-wrap: wrap;
+}
+
+.search-filter-group {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+    max-width: 600px;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+}
+
+.search-box i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+}
+
+.search-box input,
+.select-box select {
+    width: 100%;
+    padding: 10px 14px 10px 40px;
+    background: rgba(22, 36, 71, 0.7);
+    border: 1px solid rgba(111, 255, 232, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.select-box select {
+    padding-left: 14px;
+    cursor: pointer;
+    background-color: #0f1934;
+}
+
+.search-box input:focus,
+.select-box select:focus {
+    border-color: #6fffe8;
+}
+
+.btn-primary {
+    background-color: #6fffe8;
+    color: #0b132b;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #57ebd3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 255, 232, 0.3);
+}
+
+/* --- TABLA --- */
+.table-container {
+    background: linear-gradient(135deg, rgba(22, 36, 71, 0.7) 0%, rgba(15, 25, 52, 0.85) 100%);
+    border: 1px solid rgba(111, 255, 232, 0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #e2e8f0;
+}
+
+.custom-table thead tr {
+    background: rgba(111, 255, 232, 0.05);
+    border-bottom: 1px solid rgba(111, 255, 232, 0.15);
+}
+
+.custom-table th {
+    padding: 16px 20px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6fffe8;
+}
+
+.custom-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+}
+
+.custom-table tbody tr:hover {
+    background: rgba(111, 255, 232, 0.03);
+}
+
+/* --- BADGES DE ESTADO --- */
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    display: inline-block;
+}
+
+.badge-activa {
+    background: rgba(111, 255, 232, 0.15);
+    color: #6fffe8;
+    border: 1px solid rgba(111, 255, 232, 0.3);
+}
+
+.badge-completada {
+    background: rgba(72, 187, 120, 0.15);
+    color: #68d391;
+    border: 1px solid rgba(72, 187, 120, 0.3);
+}
+
+.badge-cancelada {
+    background: rgba(245, 101, 101, 0.15);
+    color: #fc8181;
+    border: 1px solid rgba(245, 101, 101, 0.3);
+}
+
+/* --- ACCIONES --- */
+.actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-action.edit {
+    color: #6fffe8;
+}
+
+.btn-action.edit:hover {
+    background: rgba(111, 255, 232, 0.15);
+}
+
+.btn-action.delete {
+    color: #fc8181;
+}
+
+.btn-action.delete:hover {
+    background: rgba(245, 101, 101, 0.15);
+}
+
+/* --- ESTRUCTURA DEL MODAL POPUP --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 15, 30, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    /* Estado oculto por defecto */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Muestra el modal al presionar el botón mediante el selector :target */
+.modal-overlay:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Caja principal del modal */
+.modal-content {
+    background: linear-gradient(135deg, rgba(22, 36, 71, 0.95) 0%, rgba(15, 25, 52, 0.98) 100%);
+    border: 1px solid rgba(111, 255, 232, 0.25);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 480px;
+    padding: 24px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay:target .modal-content {
+    transform: translateY(0);
+}
+
+/* Cabecera del Modal */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(111, 255, 232, 0.15);
+    padding-bottom: 12px;
+}
+
+.modal-header h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-header h3 i {
+    color: #6fffe8;
+}
+
+.close-btn {
+    color: #a0aec0;
+    font-size: 1.8rem;
+    text-decoration: none;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #6fffe8;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    color: #6fffe8;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    background: rgba(15, 25, 52, 0.7);
+    border: 1px solid rgba(111, 255, 232, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #6fffe8;
+    box-shadow: 0 0 8px rgba(111, 255, 232, 0.2);
+}
+
+/* BOTONES DE ACCIÓN */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #a0aec0;
+    border: 1px solid rgba(160, 174, 192, 0.3);
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+/* --- ESTILOS EXCLUSIVOS PARA SELECT Y DATE PICKER --- */
+
+/* Estilos para el campo Select */
+.custom-select {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: rgba(15, 25, 52, 0.85);
+    border: 1px solid rgba(111, 255, 232, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.custom-select option {
+    background-color: #0f1934;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.custom-select:focus {
+    border-color: #6fffe8;
+    box-shadow: 0 0 8px rgba(111, 255, 232, 0.2);
+}
+
+/* Estilos para el Date Picker */
+.custom-datepicker {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: rgba(15, 25, 52, 0.85);
+    border: 1px solid rgba(111, 255, 232, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    color-scheme: dark;
+    /* Adapta el calendario nativo a modo oscuro */
+    transition: border-color 0.3s ease;
+}
+
+.custom-datepicker:focus {
+    border-color: #6fffe8;
+    box-shadow: 0 0 8px rgba(111, 255, 232, 0.2);
+}
+
+/* Personalización del icono del calendario en navegadores Webkit */
+.custom-datepicker::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(88%) sepia(21%) saturate(992%) hue-rotate(116deg) brightness(105%) contrast(102%);
+    /* Color turquesa #6fffe8 */
+}
