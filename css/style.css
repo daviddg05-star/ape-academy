@@ -725,107 +725,161 @@ main, .main-content {
 
 }
 
-/* MÓVILES Y TABLETS */
-@media (max-width: 768px) {
-    .menu-toggle-btn {
-        display: block;
-        position: fixed;
-        top: 2px;
-        left: 15px;
-        z-index: 1300;
-        font-size: 1.4rem;
-        cursor: pointer;
-        color: rgba(10, 15, 30, 0.6)
-    }
+/* --- CONFIGURACIÓN RESPONSIVE: MÓVIL TIPO APP (BARRA ABAJO + LOGO ARRIBA) --- */
 
-    .menu-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(10, 15, 30, 0.6);
-        backdrop-filter: blur(4px);
-        z-index: 1150;
-    }
+/* Ocultamos el header superior móvil en computadoras por defecto */
+.mobile-top-bar {
+    display: none;
+}
 
-    .menu-toggle-checkbox:checked ~ .menu-overlay {
-        display: block;
+/* En pantallas grandes (Escritorio), el menú lateral clásico se mantiene intacto */
+@media (min-width: 769px) {
+    .dashboard {
+        display: flex;
     }
 
     .dashboard-header {
+        width: 20%;
         position: fixed;
-        left: 0;
         top: 0;
-        width: 75px;
+        left: 0;
         height: 100vh;
-        z-index: 50;
-        transition: width 0.3s ease;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-
-    .dashboard-header .brand-text,
-    .dashboard-header .tagline,
-    .dashboard-header .dashboard-menu span,
-    .dashboard-header .user-details {
-        display: none;
+        z-index: 100;
     }
 
     .dashboard-footer-sidebar {
-        width: 75px;
+        width: 20%;
         position: fixed;
         bottom: 0;
         left: 0;
-        z-index: 1051;
-        padding: 12px 12px;
-        transition: width 0.3s ease;
-        overflow: hidden;
+        z-index: 101;
     }
 
     main, .main-content {
-        width: calc(100% - 75px);
-        margin-left: 75px;
-        transition: all 0.3s ease;
+        margin-left: 20%;
+        width: 80%;
+    }
+
+    .footer-main {
+        width: 80%;
+        margin-left: 20%;
+    }
+}
+
+/* En Celulares y Tablets (Menú inferior tipo App y Logo superior) */
+@media (max-width: 768px) {
+    body {
+        background: #0c142a;
+        padding-bottom: 70px; /* Espacio para que la barra inferior no tape el contenido */
+    }
+
+    /* 1. BARRA SUPERIOR CON EL LOGO */
+    .mobile-top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+        background: #6fffe8;
+        border-bottom: 1px solid rgba(111, 255, 232, 0.15);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        backdrop-filter: blur(8px);
+    }
+
+    .mobile-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mobile-brand .brand-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .mobile-brand-title {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #0c142a;
+    margin: 0;
+    line-height: 1;
+    padding: 0px !important;
+    }
+
+    /* 2. TRANSFORMAMOS EL .dashboard-header EN BARRA INFERIOR TIPO APP */
+    .dashboard-header {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background: rgba(12, 20, 42, 0.95);
+        border-top: 1px solid rgba(111, 255, 232, 0.2);
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Ocultamos el logo superior y el footer de usuario dentro de la barra inferior móvil */
+    .dashboard-header .brand-logo,
+    .dashboard-header .dashboard-footer-sidebar,
+    .dashboard-header .dashboard-nav ul li a span {
+        display: none !important;
+    }
+
+    /* Estilizamos la navegación inferior en fila horizontal */
+    .dashboard-nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    .dashboard-nav ul {
+        flex-direction: row !important;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dashboard-nav li a {
+        padding: 8px;
+        margin: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #a0aec0;
+    }
+
+    .dashboard-nav li a i {
+        font-size: 1.4rem;
+    }
+
+    .dashboard-nav li a:hover,
+    .dashboard-nav li a.activo {
+        color: #6fffe8;
+        background: transparent !important;
+        border-left: none !important;
+    }
+
+    /* 3. CONTENIDO PRINCIPAL EN MÓVIL */
+    main, .main-content {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 60px; /* Espacio para que no choque con la barra superior del logo */
+        padding: 10px 0px;
     }
 
     .footer-main {
         width: 100%;
-        transition: all 0.3s ease;
-    }
-
-    /* Al abrirse el menú */
-    .menu-toggle-checkbox:checked ~ .dashboard-header {
-        width: 280px;
-        box-shadow: 20px 0 50px rgba(0,0,0,0.8);
-        z-index: 1200;
-    }
-
-    .menu-toggle-checkbox:checked ~ .dashboard-header .brand-text,
-    .menu-toggle-checkbox:checked ~ .dashboard-header .tagline,
-    .menu-toggle-checkbox:checked ~ .dashboard-header .dashboard-menu span,
-    .menu-toggle-checkbox:checked ~ .dashboard-header .user-details {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .menu-toggle-checkbox:checked ~ .dashboard-header .dashboard-footer-sidebar,
-    .menu-toggle-checkbox:checked ~ .dashboard-footer-sidebar {
-        width: 280px;
-        z-index: 1201;
-    }
-
-    .menu-toggle-checkbox:checked ~ main,
-    .menu-toggle-checkbox:checked ~ .main-content {
-        width: 100%;
         margin-left: 0;
-        padding-left: 85px;
-    }
-
-    .menu-toggle-checkbox:checked ~ .footer-main {
-        width: 100%;
-        margin-left: 0;
+        margin-bottom: 60px;
     }
 
     .dashboard-cars {
@@ -835,6 +889,71 @@ main, .main-content {
     .welcome-banner {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 15px;
     }
+/* --- ESTILOS PARA EL TOOLTIP FLOTANTE --- */
+
+/* Posicionamiento relativo para que el tooltip se ubique respecto al enlace */
+.dashboard-menu li a {
+    position: relative;
+}
+
+/* El tooltip en sí (oculto por defecto) */
+.dashboard-menu li a::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* Lo ubica justo arriba del botón */
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: linear-gradient(135deg, rgba(22, 36, 71, 0.95) 0%, rgba(15, 25, 52, 0.98) 100%);
+    color: #6fffe8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    border: 1px solid rgba(111, 255, 232, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 1500;
+}
+
+/* Pequeña flechita del tooltip */
+.dashboard-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(15, 25, 52, 0.95) transparent transparent transparent;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 1500;
+}
+
+/* Al pasar el mouse (o tocar en móvil), aparece con animación flotante */
+.dashboard-menu li a:hover::before,
+.dashboard-menu li a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Ajuste específico para cuando está en la barra inferior en móviles */
+@media (max-width: 768px) {
+    .dashboard-menu li a::before {
+        bottom: 140%; /* Un poco más arriba en la barra inferior móvil */
+    }
+    .dashboard-menu li a::after {
+        bottom: 125%;
+    }
+}    
 }

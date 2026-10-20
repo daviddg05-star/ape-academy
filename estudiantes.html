@@ -11,22 +11,19 @@
 </head>
 
 <body class="dashboard">
-    <!-- Checkbox oculto para controlar la apertura del menú en móvil sin JS -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+    <!-- HEADER SUPERIOR MÓVIL (Solo se ve en celulares) -->
+    <header class="mobile-top-bar">
+        <div class="mobile-brand">
+            <span class="brand-icon"></span>
+            <span class="mobile-brand-title">Ape Academy</span>
+        </div>
+        <!-- Opcional: si quieres un perfil o menú rápido arriba -->
+    </header>
 
-    <!-- Botón hamburguesa fijo para abrir el menú en móviles -->
-    <label for="menu-toggle" class="menu-toggle-btn">
-        <i class="bi bi-list"></i>
-    </label>
-
-    <!-- Capa oscura de fondo (overlay) para cerrar el menú al hacer clic fuera -->
-    <label for="menu-toggle" class="menu-overlay"></label>
-
+    <!-- MENÚ LATERAL (Se usa en Escritorio / En móvil se convierte en la barra inferior) -->
     <header class="dashboard-header" id="dashboardHeader">
         <div class="brand-logo">
-            <!-- Icono cargado como máscara CSS -->
             <span class="brand-icon"></span>
-            <!-- Bloque de texto -->
             <div class="brand-text">
                 <h1 class="brand-title">Ape Academy</h1>
                 <p class="tagline">¡Aprende sin límites!</p>
@@ -35,12 +32,13 @@
 
         <nav class="dashboard-nav">
             <ul class="dashboard-menu">
-                <li><a href="#" class="activo"><i class="bi bi-grid-1x2-fill icon-animated"></i><span>Dashboard</span></a></li>
-                <li><a href="estudiantes.html"><i class="bi bi-people-fill icon-animated"></i><span>Estudiantes</span></a></li>
-                <li><a href="cursos.html"><i class="bi bi-journal-bookmark-fill icon-animated"></i><span>Cursos</span></a></li>
-                <li><a href="Matriculas.html"><i class="bi bi-card-checklist icon-animated"></i><span>Matrículas</span></a></li>
+                <li><a href="index.html" class="activo" data-tooltip="Dashboard"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a></li>
+                <li><a href="estudiantes.html" data-tooltip="Estudiantes"><i class="bi bi-people-fill"></i><span>Estudiantes</span></a></li>
+                <li><a href="cursos.html" data-tooltip="Cursos"><i class="bi bi-journal-bookmark-fill"></i><span>Cursos</span></a></li>
+                <li><a href="Matriculas.html" data-tooltip="Matrículas"><i class="bi bi-card-checklist"></i><span>Matrículas</span></a></li>
             </ul>
         </nav>
+        
         <footer class="dashboard-footer-sidebar">
             <div class="user-profile">
                 <span class="brand-icon user-icon"></span>
@@ -51,7 +49,8 @@
             </div>
         </footer>
     </header>
-    <main>
+
+    <main class="main-content">
         <header class="header-main">
             <h1>Estudiantes</h1>
         </header>
