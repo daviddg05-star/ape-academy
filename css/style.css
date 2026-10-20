@@ -321,12 +321,17 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 /* --- MAIN Y COMPATIBILIDAD GENERAL PARA PÁGINAS INTERNAS --- */
-main, .main-content {
+main,
+.main-content {
     background: radial-gradient(circle at 10% 10%, rgba(15, 45, 60, 0.8) 0%, rgba(12, 20, 42, 0.95) 45%, #0c142a 80%);
     box-sizing: border-box;
     width: 80%;
@@ -357,18 +362,48 @@ main, .main-content {
 
 .footer-main {
     color: #fff;
-    padding: 10px;
+    padding: 15px 25px;
     font-family: 'Fredoka', sans-serif;
     background: linear-gradient(135deg, rgba(22, 36, 71, 0.7) 0%, rgba(15, 25, 52, 0.85) 100%);
     border: 1px solid rgba(111, 255, 232, 0.15);
     backdrop-filter: blur(8px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    padding: 15px 25px;
     text-align: center;
 }
 
-/* --- ESTILOS DE TABLAS Y ACCIONES (Para páginas como Estudiantes, Cursos, Matrículas) --- */
+/* --- ESTILOS DE TABLAS Y ACCIONES (Con Scroll Responsive) --- */
+/* --- CONTENEDOR DE TABLA CON SCROLL HORIZONTAL ACTIVO --- */
+.table-container {
+    width: 100%;
+    overflow-x: auto !important; /* Forzamos el scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* Scroll fluido en móviles y tablets */
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(22, 36, 71, 0.7) 0%, rgba(15, 25, 52, 0.85) 100%);
+    border: 1px solid rgba(111, 255, 232, 0.15);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo personalizado para la barra de desplazamiento */
+.table-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: rgba(15, 25, 52, 0.5);
+    border-radius: 0 0 12px 12px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: rgba(111, 255, 232, 0.3);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(111, 255, 232, 0.6);
+}
+
 .table-actions {
     display: flex;
     justify-content: space-between;
@@ -430,15 +465,6 @@ main, .main-content {
     transform: translateY(-2px);
 }
 
-.table-container {
-    background: linear-gradient(135deg, rgba(22, 36, 71, 0.7) 0%, rgba(15, 25, 52, 0.85) 100%);
-    border: 1px solid rgba(111, 255, 232, 0.15);
-    border-radius: 12px;
-    backdrop-filter: blur(8px);
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
 .custom-table {
     width: 100%;
     border-collapse: collapse;
@@ -456,12 +482,14 @@ main, .main-content {
     font-size: 0.85rem;
     text-transform: uppercase;
     color: #6fffe8;
+    white-space: nowrap;
 }
 
 .custom-table td {
     padding: 16px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .custom-table tbody tr:hover {
@@ -477,15 +505,45 @@ main, .main-content {
     display: inline-block;
 }
 
-.badge-activa { background: rgba(111, 255, 232, 0.15); color: #6fffe8; border: 1px solid rgba(111, 255, 232, 0.3); }
-.badge-completada { background: rgba(72, 187, 120, 0.15); color: #68d391; border: 1px solid rgba(72, 187, 120, 0.3); }
-.badge-cancelada { background: rgba(245, 101, 101, 0.15); color: #fc8181; border: 1px solid rgba(245, 101, 101, 0.3); }
+.badge-activa {
+    background: rgba(111, 255, 232, 0.15);
+    color: #6fffe8;
+    border: 1px solid rgba(111, 255, 232, 0.3);
+}
 
-.actions-cell { display: flex; gap: 8px; }
-.btn-action { background: transparent; border: none; font-size: 1.1rem; cursor: pointer; padding: 6px; border-radius: 6px; }
-.btn-action.edit { color: #6fffe8; }
-.btn-action.delete { color: #fc8181; }
+.badge-completada {
+    background: rgba(72, 187, 120, 0.15);
+    color: #68d391;
+    border: 1px solid rgba(72, 187, 120, 0.3);
+}
 
+.badge-cancelada {
+    background: rgba(245, 101, 101, 0.15);
+    color: #fc8181;
+    border: 1px solid rgba(245, 101, 101, 0.3);
+}
+
+.actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.btn-action.edit {
+    color: #6fffe8;
+}
+
+.btn-action.delete {
+    color: #fc8181;
+}
 
 /* --- ESTRUCTURA DEL MODAL POPUP --- */
 .modal-overlay {
@@ -500,20 +558,16 @@ main, .main-content {
     align-items: center;
     justify-content: center;
     z-index: 1000;
-
-    /* Estado oculto por defecto */
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
 }
 
-/* Muestra el modal al presionar el botón mediante el selector :target */
 .modal-overlay:target {
     opacity: 1;
     visibility: visible;
 }
 
-/* Caja principal del modal */
 .modal-content {
     background: linear-gradient(135deg, rgba(22, 36, 71, 0.95) 0%, rgba(15, 25, 52, 0.98) 100%);
     border: 1px solid rgba(111, 255, 232, 0.25);
@@ -530,7 +584,6 @@ main, .main-content {
     transform: translateY(0);
 }
 
-/* Cabecera del Modal */
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -565,7 +618,6 @@ main, .main-content {
     color: #6fffe8;
 }
 
-/* CAMPOS DEL FORMULARIO */
 .modal-form {
     display: flex;
     flex-direction: column;
@@ -602,7 +654,6 @@ main, .main-content {
     box-shadow: 0 0 8px rgba(111, 255, 232, 0.2);
 }
 
-/* BOTONES DE ACCIÓN */
 .modal-actions {
     display: flex;
     justify-content: flex-end;
@@ -627,9 +678,6 @@ main, .main-content {
     color: #ffffff;
 }
 
-/* --- ESTILOS EXCLUSIVOS PARA SELECT Y DATE PICKER --- */
-
-/* Estilos para el campo Select */
 .custom-select {
     width: 100%;
     padding: 10px 14px;
@@ -641,7 +689,6 @@ main, .main-content {
     outline: none;
     cursor: pointer;
     box-sizing: border-box;
-    transition: border-color 0.3s ease;
 }
 
 .custom-select option {
@@ -650,12 +697,6 @@ main, .main-content {
     padding: 10px;
 }
 
-.custom-select:focus {
-    border-color: #6fffe8;
-    box-shadow: 0 0 8px rgba(111, 255, 232, 0.2);
-}
-
-/* Estilos para el Date Picker */
 .custom-datepicker {
     width: 100%;
     padding: 10px 14px;
@@ -667,31 +708,69 @@ main, .main-content {
     outline: none;
     box-sizing: border-box;
     color-scheme: dark;
-    /* Adapta el calendario nativo a modo oscuro */
-    transition: border-color 0.3s ease;
 }
 
-.custom-datepicker:focus {
-    border-color: #6fffe8;
-    box-shadow: 0 0 8px rgba(111, 255, 232, 0.2);
-}
-
-/* Personalización del icono del calendario en navegadores Webkit */
 .custom-datepicker::-webkit-calendar-picker-indicator {
     cursor: pointer;
     filter: invert(88%) sepia(21%) saturate(992%) hue-rotate(116deg) brightness(105%) contrast(102%);
-    /* Color turquesa #6fffe8 */
 }
 
+
+/* --- ESTILOS PARA EL TOOLTIP FLOTANTE (Escritorio y Móvil) --- */
+.dashboard-menu li a {
+    position: relative;
+}
+
+.dashboard-menu li a::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: linear-gradient(135deg, rgba(22, 36, 71, 0.95) 0%, rgba(15, 25, 52, 0.98) 100%);
+    color: #6fffe8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    border: 1px solid rgba(111, 255, 232, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 1500;
+}
+
+.dashboard-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(15, 25, 52, 0.95) transparent transparent transparent;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 1500;
+}
+
+.dashboard-menu li a:hover::before,
+.dashboard-menu li a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
 
 
 /* --- CONFIGURACIÓN RESPONSIVE --- */
 
-.menu-toggle-checkbox {
-    display: none;
-}
-
-.menu-toggle-btn {
+.mobile-top-bar {
     display: none;
 }
 
@@ -718,44 +797,8 @@ main, .main-content {
         z-index: 101;
     }
 
-    main, .main-content {
-        margin-left: 20%;
-        width: 80%;
-    }
-
-}
-
-/* --- CONFIGURACIÓN RESPONSIVE: MÓVIL TIPO APP (BARRA ABAJO + LOGO ARRIBA) --- */
-
-/* Ocultamos el header superior móvil en computadoras por defecto */
-.mobile-top-bar {
-    display: none;
-}
-
-/* En pantallas grandes (Escritorio), el menú lateral clásico se mantiene intacto */
-@media (min-width: 769px) {
-    .dashboard {
-        display: flex;
-    }
-
-    .dashboard-header {
-        width: 20%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        z-index: 100;
-    }
-
-    .dashboard-footer-sidebar {
-        width: 20%;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 101;
-    }
-
-    main, .main-content {
+    main,
+    .main-content {
         margin-left: 20%;
         width: 80%;
     }
@@ -766,14 +809,13 @@ main, .main-content {
     }
 }
 
-/* En Celulares y Tablets (Menú inferior tipo App y Logo superior) */
+/* MÓVILES Y TABLETS (Menú inferior tipo App y Logo superior) */
 @media (max-width: 768px) {
     body {
         background: #0c142a;
-        padding-bottom: 70px; /* Espacio para que la barra inferior no tape el contenido */
+        padding-bottom: 70px;
     }
 
-    /* 1. BARRA SUPERIOR CON EL LOGO */
     .mobile-top-bar {
         display: flex;
         align-items: center;
@@ -796,21 +838,19 @@ main, .main-content {
     }
 
     .mobile-brand .brand-icon {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
     }
 
     .mobile-brand-title {
-    font-family: 'Fredoka', sans-serif;
-    font-weight: 600;
-    font-size: 1.8rem;
-    color: #0c142a;
-    margin: 0;
-    line-height: 1;
-    padding: 0px !important;
+        font-family: 'Fredoka', sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #0c142a;
+        margin: 0;
+        line-height: 1;
     }
 
-    /* 2. TRANSFORMAMOS EL .dashboard-header EN BARRA INFERIOR TIPO APP */
     .dashboard-header {
         position: fixed;
         bottom: 0;
@@ -827,14 +867,12 @@ main, .main-content {
         justify-content: center;
     }
 
-    /* Ocultamos el logo superior y el footer de usuario dentro de la barra inferior móvil */
     .dashboard-header .brand-logo,
     .dashboard-header .dashboard-footer-sidebar,
     .dashboard-header .dashboard-nav ul li a span {
         display: none !important;
     }
 
-    /* Estilizamos la navegación inferior en fila horizontal */
     .dashboard-nav {
         width: 100%;
         margin: 0;
@@ -868,12 +906,12 @@ main, .main-content {
         border-left: none !important;
     }
 
-    /* 3. CONTENIDO PRINCIPAL EN MÓVIL */
-    main, .main-content {
+    main,
+    .main-content {
         width: 100%;
         margin-left: 0;
-        margin-top: 60px; /* Espacio para que no choque con la barra superior del logo */
-        padding: 10px 0px;
+        margin-top: 60px;
+        padding: 10px 15px;
     }
 
     .footer-main {
@@ -891,69 +929,12 @@ main, .main-content {
         text-align: center;
         gap: 15px;
     }
-/* --- ESTILOS PARA EL TOOLTIP FLOTANTE --- */
 
-/* Posicionamiento relativo para que el tooltip se ubique respecto al enlace */
-.dashboard-menu li a {
-    position: relative;
-}
-
-/* El tooltip en sí (oculto por defecto) */
-.dashboard-menu li a::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 125%; /* Lo ubica justo arriba del botón */
-    left: 50%;
-    transform: translateX(-50%) translateY(6px);
-    background: linear-gradient(135deg, rgba(22, 36, 71, 0.95) 0%, rgba(15, 25, 52, 0.98) 100%);
-    color: #6fffe8;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 6px 10px;
-    border-radius: 6px;
-    white-space: nowrap;
-    border: 1px solid rgba(111, 255, 232, 0.25);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.25s ease;
-    z-index: 1500;
-}
-
-/* Pequeña flechita del tooltip */
-.dashboard-menu li a::after {
-    content: '';
-    position: absolute;
-    bottom: 110%;
-    left: 50%;
-    transform: translateX(-50%) translateY(6px);
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgba(15, 25, 52, 0.95) transparent transparent transparent;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.25s ease;
-    z-index: 1500;
-}
-
-/* Al pasar el mouse (o tocar en móvil), aparece con animación flotante */
-.dashboard-menu li a:hover::before,
-.dashboard-menu li a:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* Ajuste específico para cuando está en la barra inferior en móviles */
-@media (max-width: 768px) {
     .dashboard-menu li a::before {
-        bottom: 140%; /* Un poco más arriba en la barra inferior móvil */
+        bottom: 140%;
     }
+
     .dashboard-menu li a::after {
         bottom: 125%;
     }
-}    
 }
